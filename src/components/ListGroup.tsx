@@ -1,12 +1,38 @@
-function ListGroup() {
+import { useState } from "react";
+
+interface ListGroupProps {
+  items: string[];
+  heading: string;
+  onSelectItem: (item: string) => void;
+}
+
+function ListGroup({ items, heading, onSelectItem }: ListGroupProps) {
+  // Hook
+  const [selectedIndex, setSelectedIndex] = useState(-1);
+
   return (
-    <div>
+    <>
+      <h1>{heading}</h1>
+      {items.length === 0 && <p>No items to display</p>}
       <ul className="list-group">
-        <li className="list-group-item">Item 1</li>
-        <li className="list-group-item">Item 2</li>
-        <li className="list-group-item">Item 3</li>
+        {items.map((item, index) => (
+          <li
+            key={item}
+            className={
+              selectedIndex === index
+                ? "list-group-item active"
+                : "list-group-item"
+            }
+            onClick={() => {
+              setSelectedIndex(index);
+              onSelectItem(item);
+            }}
+          >
+            {item}
+          </li>
+        ))}
       </ul>
-    </div>
+    </>
   );
 }
 
