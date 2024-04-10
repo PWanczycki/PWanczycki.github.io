@@ -9,12 +9,12 @@ interface ButtonProps {
     | "info"
     | "light"
     | "dark";
-  onClick: () => void;
+  onClick?: () => void;
 }
 
 const Button = ({ children, color = "primary", onClick }: ButtonProps) => {
   return (
-    <button className={"btn btn-" + color} onClick={onClick}>
+    <button className={"btn btn-" + color + " m-3"} onClick={onClick}>
       {children}
     </button>
   );
