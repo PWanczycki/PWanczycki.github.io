@@ -1,13 +1,10 @@
-import { useState, useEffect } from "react";
-import Alert from "./components/Alert";
-import Button from "./components/Button";
-import linkedinLogo from "./assets/linkedin.png";
-import resume from "./assets/PhilipWanczyckiResume.pdf";
+import { useEffect } from "react";
+import Button from "../components/Button";
+import linkedinLogo from "../assets/linkedin.png";
+import resume from "../assets/PhilipWanczyckiResume.pdf";
+import { Link } from "react-router-dom";
 
-function App() {
-  const [showButtonAlert, setShowButtonAlert] = useState(false);
-  const handleCloseAlert = () => setShowButtonAlert(false);
-
+function Root() {
   useEffect(() => {
     document.title = "Philip Wanczycki - Software Developer";
   }, []);
@@ -18,14 +15,9 @@ function App() {
       <a href={resume} download>
         <Button color="primary">Download Resume</Button>
       </a>
-      <Button color="primary" onClick={() => setShowButtonAlert(true)}>
-        Projects
-      </Button>
-      {showButtonAlert && (
-        <Alert onClose={handleCloseAlert}>
-          <strong>Projects:</strong> Coming soon!
-        </Alert>
-      )}
+      <Link to="/projects">
+        <Button color="primary">Projects</Button>
+      </Link>
       <div>
         <a href="http://github.com/PWanczycki">
           <img
@@ -42,4 +34,4 @@ function App() {
   );
 }
 
-export default App;
+export default Root;
