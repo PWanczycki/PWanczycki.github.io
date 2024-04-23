@@ -24,7 +24,7 @@ function App() {
       </Button>
       {showButtonAlert && (
         <Alert onClose={handleCloseAlert}>
-          <strong>Projects:</strong> Coming soon!
+          <strong>Projects:</strong> &#128679; Coming soon! &#128679;
         </Alert>
       )}
       <div>
