@@ -7,7 +7,7 @@ export interface Project {
 const projects: Project[] = [
     {
         id: "1",
-        name: "Test 1",
+        name: "Project 1",
         description: "This is project 1",
     },
     {

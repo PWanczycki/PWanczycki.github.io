@@ -1,20 +1,11 @@
 interface ButtonProps {
   children: string;
-  color?:
-    | "primary"
-    | "secondary"
-    | "success"
-    | "danger"
-    | "warning"
-    | "info"
-    | "light"
-    | "dark";
   onClick?: () => void;
 }
 
-const Button = ({ children, color = "primary", onClick }: ButtonProps) => {
+const Button = ({ children, onClick }: ButtonProps) => {
   return (
-    <button className={"btn btn-" + color + " m-3"} onClick={onClick}>
+    <button className="btn-wrapper" onClick={onClick}>
       {children}
     </button>
   );

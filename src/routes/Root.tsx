@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import Button from "../components/Button";
-import linkedinLogo from "../assets/linkedin.png";
+import githubLogo from "../assets/github-mark-white.svg";
+import linkedinLogo from "../assets/linkedin-white.svg";
 import resume from "../assets/PhilipWanczyckiResume.pdf";
 import { Link } from "react-router-dom";
 
@@ -10,25 +11,28 @@ function Root() {
   }, []);
 
   return (
-    <div className="centered">
-      <h1>Philip Wanczycki</h1>
-      <a href={resume} download>
-        <Button color="primary">Download Resume</Button>
-      </a>
-      <Link to="/projects">
-        <Button color="primary">Projects</Button>
-      </Link>
-      <div>
-        <a href="http://github.com/PWanczycki">
-          <img
-            src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
-            alt="Github"
-            width="100"
-          />
+    <div className="pattern">
+      <div className="centered">
+        <h1>Philip Wanczycki</h1>
+        <a href={resume} download>
+          <Button>Download Resume</Button>
         </a>
-        <a href="http://linkedin.com/in/philipwanczycki">
-          <img src={linkedinLogo} alt="LinkedIn" width="80" />
-        </a>
+        <Link to="/projects">
+          <Button>Projects</Button>
+        </Link>
+        <div>
+          <a href="http://github.com/PWanczycki">
+            <img
+              className="githubLogo"
+              src={githubLogo}
+              alt="Github"
+              width="80"
+            />
+          </a>
+          <a href="http://linkedin.com/in/philipwanczycki">
+            <img src={linkedinLogo} alt="LinkedIn" width="105" />
+          </a>
+        </div>
       </div>
     </div>
   );

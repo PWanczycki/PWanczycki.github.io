@@ -1,7 +1,71 @@
+:root {
+  font-family: Inter, sans-serif;
+  font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
+}
+@supports (font-variation-settings: normal) {
+  :root { font-family: InterVariable, sans-serif; }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #fff
+}
+
 .centered {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 100vh;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.pattern {
+  width: 100%;
+  height: 100%;
+  background-color: #313131;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.171) 2px, transparent 0);
+  background-size: 30px 30px;
+  background-position: -5px -5px
+}
+
+
+.btn-wrapper {
+  margin: 0.5rem;
+}
+
+button {
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.3rem;
+  background-color: #171717;
+  color: #fff;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+button:hover {
+  border-radius: 0.3rem;
+  transform: translateY(-10px);
+  box-shadow: 0 7px 0 -2px #9748f1,
+  0 15px 0 -4px #ff8ad8,
+  0 16px 10px -3px #ff8ad8;
+}
+
+button:active {
+  transition: all 0.2s;
+  transform: translateY(-5px);
+  box-shadow: 0 4px 0 -2px #b859f8,
+   0 8px 0 -4px #ff8ad8,
+   0 12px 10px -3px #ff8ad8;
+}
+
+.githubLogo {
+  margin: 1rem;
+}
