@@ -14,12 +14,16 @@ function Root() {
     <div className="pattern">
       <div className="centered">
         <h1>Philip Wanczycki</h1>
-        <a href={resume} download>
-          <Button>Download Resume</Button>
-        </a>
-        <Link to="/projects">
-          <Button>Projects</Button>
-        </Link>
+        <div className="sm-margin">
+          <a href={resume} download>
+            <Button>Download Resume</Button>
+          </a>
+        </div>
+        <div className="sm-margin">
+          <Link to="/projects">
+            <Button>Projects</Button>
+          </Link>
+        </div>
         <div>
           <a href="http://github.com/PWanczycki">
             <img

@@ -19,9 +19,11 @@ export default function ProjectsList() {
     <div className="container">
       <div className="sidebar">
         <div className="sidebar-header">
-          <Link to="/">
-            <Button>Home</Button>
-          </Link>
+          <div className="md-margin">
+            <Link to="/">
+              <Button>Home</Button>
+            </Link>
+          </div>
           <h1>Projects</h1>
         </div>
         {/* <div className="full-width">

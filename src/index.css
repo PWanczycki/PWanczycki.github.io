@@ -52,8 +52,12 @@ p {
 }
 
 
-.btn-wrapper {
+.sm-margin {
   margin: 0.5rem;
+}
+
+.md-margin {
+  margin: 1rem;
 }
 
 button {
@@ -69,15 +73,15 @@ button {
 
 button:hover {
   border-radius: 0.3rem;
-  transform: translateY(-10px);
-  box-shadow: 0 7px 0 -2px #9748f1,
-  0 15px 0 -4px #ff8ad8,
-  0 16px 10px -3px #ff8ad8;
+  transform: translateY(-6px);
+  box-shadow: 0 6px 0 -2px #9748f1,
+  0 12px 0 -4px #ff8ad8,
+  0 14px 10px -3px #ff8ad8;
 }
 
 button:active {
   transition: all 0.2s;
-  transform: translateY(-5px);
+  transform: translateY(-3px);
   box-shadow: 0 4px 0 -2px #b859f8,
    0 8px 0 -4px #ff8ad8,
    0 12px 10px -3px #ff8ad8;
@@ -100,10 +104,6 @@ button:active {
 .sidebar-header {
   display: flex;
   align-items: center;
-}
-
-.sidebar-header .btn-wrapper {
-  margin: 1rem;
 }
 
 #q{

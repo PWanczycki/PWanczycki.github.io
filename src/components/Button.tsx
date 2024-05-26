@@ -4,11 +4,7 @@ interface ButtonProps {
 }
 
 const Button = ({ children, onClick }: ButtonProps) => {
-  return (
-    <div className="btn-wrapper">
-      <button onClick={onClick}>{children}</button>
-    </div>
-  );
+  return <button onClick={onClick}>{children}</button>;
 };
 
 export default Button;
