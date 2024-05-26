@@ -43,15 +43,15 @@ export default function ProjectsList() {
           <div className="navbar full-width">
             {projects.length ? (
               <ul className="navbar-nav">
-                {projects.map((project) => (
+                {projects.map((project, index) => (
                   <NavLink
-                    to={`${project.id}`}
+                    to={`${index}`}
                     className={({ isActive, isPending }) =>
                       "nav-link" +
                       (isActive ? " active" : isPending ? " pending" : "")
                     }
                   >
-                    <li key={project.id} className="nav-item">
+                    <li key={index} className="nav-item">
                       {project.name}
                     </li>
                   </NavLink>

@@ -12,6 +12,9 @@ function ProjectDetails() {
   return (
     <div>
       <h1>{project.name}</h1>
+      <p className="date">
+        <i>{project.date}</i>
+      </p>
       <p>{project.description}</p>
     </div>
   );

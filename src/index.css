@@ -162,3 +162,8 @@ nav ul {
   height: 100vh;
   padding: 1rem 3rem 1rem 3rem;
 }
+
+.date {
+  font-size: 1rem;
+  color: #dddddd;
+}
