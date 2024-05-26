@@ -15,6 +15,11 @@ const projects: Project[] = [
         name: "Project 2",
         description: "This is project 2",
     },
+    {
+        id: "3",
+        name: "Project 3",
+        description: "This is project 3",
+    }
 ];
 
 export async function getProjects() {
