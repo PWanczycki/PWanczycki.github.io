@@ -1,7 +1,7 @@
-import { Link, Outlet, useLoaderData, NavLink } from "react-router-dom";
-import Button from "../components/Button";
+import { Outlet, useLoaderData } from "react-router-dom";
 import { getProjects, Project } from "../projects";
 import { useEffect } from "react";
+import Navbar from "../components/Navbar";
 
 export async function loader() {
   const projects = await getProjects();
@@ -17,54 +17,14 @@ export default function ProjectsList() {
 
   return (
     <div className="container">
-      <div className="sidebar">
-        <div className="sidebar-header">
-          <div className="md-margin">
-            <Link to="/">
-              <Button>Home</Button>
-            </Link>
-          </div>
-          <h1>Projects</h1>
-        </div>
-        {/* <div className="full-width">
-          <form id="search-form" role="search">
-            <input
-              id="q"
-              aria-label="Search projects"
-              placeholder="Search"
-              type="search"
-              name="q"
-            />
-            <div id="search-spinner" aria-hidden hidden={true} />
-            <div className="sr-only" aria-live="polite"></div>
-          </form>
-        </div> */}
-        <nav className="">
-          <div className="navbar full-width">
-            {projects.length ? (
-              <ul className="navbar-nav">
-                {projects.map((project, index) => (
-                  <NavLink
-                    to={`${index}`}
-                    className={({ isActive, isPending }) =>
-                      "nav-link" +
-                      (isActive ? " active" : isPending ? " pending" : "")
-                    }
-                  >
-                    <li key={index} className="nav-item">
-                      {project.name}
-                    </li>
-                  </NavLink>
-                ))}
-              </ul>
-            ) : (
-              <p>
-                <i>No Projects</i>
-              </p>
-            )}
-          </div>
-        </nav>
-      </div>
+      <Navbar
+        items={projects.map((project, index) => ({
+          route: index.toString(),
+          name: project.name,
+        }))}
+        heading="Projects"
+        homeLink="/"
+      />
       <div className="detail pattern">
         <Outlet />
       </div>

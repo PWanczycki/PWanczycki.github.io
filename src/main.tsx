@@ -1,9 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-// import "bootstrap/dist/css/bootstrap.css";
 import "./index.css";
-import "bootstrap/js/dist/alert";
 import Root from "./routes/Root.tsx";
 import ErrorPage from "./error-page.tsx";
 import ProjectsList, {
