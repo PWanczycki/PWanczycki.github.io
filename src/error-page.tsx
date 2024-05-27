@@ -10,7 +10,7 @@ export default function ErrorPage() {
   console.error(error);
 
   return (
-    <div id="error-page" className="centered">
+    <div id="error-page" className="pattern centered">
       <h1>Oops!</h1>
       <p>Sorry, an unexpected error has occurred.</p>
       <p>
