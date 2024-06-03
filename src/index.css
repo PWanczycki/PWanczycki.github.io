@@ -23,6 +23,12 @@ p {
   color: #fff;
 }
 
+.text {
+  white-space: pre-line;
+  width: 33%;
+  text-align: center;
+}
+
 .container {
   display: flex;
   background-color: #ff8ad8;
@@ -155,6 +161,18 @@ nav ul {
   background-color: #313131;
 }
 
+.detail {
+  float: right;
+  box-sizing: border-box;
+  height: 100vh;
+  padding: 1rem 3rem 1rem 3rem;
+}
+
+.date {
+  font-size: 1rem;
+  color: #dddddd;
+}
+
 @media screen and (max-width: 768px) {
   .container {
     flex-direction: column;
@@ -167,17 +185,7 @@ nav ul {
   .detail {
     flex-basis: 80%;
   }
-  
-}
-
-.detail {
-  float: right;
-  box-sizing: border-box;
-  height: 100vh;
-  padding: 1rem 3rem 1rem 3rem;
-}
-
-.date {
-  font-size: 1rem;
-  color: #dddddd;
+  .text {
+    width: 90%;
+  }
 }
