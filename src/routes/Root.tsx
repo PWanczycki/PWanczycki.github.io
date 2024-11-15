@@ -14,15 +14,22 @@ function Root() {
     <div className="pattern">
       <div className="centered">
         <h1>Philip Wanczycki</h1>
-        <div className="sm-margin">
-          <a href={resume} download>
-            <Button>Download Resume</Button>
-          </a>
-        </div>
+        <p className="text">
+          I am a software developer with a variety of interests, including
+          artificial intelligence, cybersecurity, game development, and
+          fullstack development. If it's got code, it's in my workload. <br />
+          <br />
+          Feel free to browse my projects below!
+        </p>
         <div className="sm-margin">
           <Link to="/projects">
             <Button>Projects</Button>
           </Link>
+        </div>
+        <div className="sm-margin">
+          <a href={resume} download>
+            <Button>Download Resume</Button>
+          </a>
         </div>
         <div>
           <a href="http://github.com/PWanczycki">
