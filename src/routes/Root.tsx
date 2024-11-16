@@ -16,8 +16,8 @@ function Root() {
         <h1>Philip Wanczycki</h1>
         <p className="text">
           I am a software developer with a variety of interests, including
-          artificial intelligence, cybersecurity, game development, and
-          fullstack development. If it's got code, it's in my workload. <br />
+          artificial intelligence, cybersecurity, and fullstack development.
+          <br />
           <br />
           Feel free to browse my projects below!
         </p>
